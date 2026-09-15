@@ -1,0 +1,13 @@
+CMS bat programa-koderik jakin gabe webgune bat sortu eta aldatzeko tresna sinple bat da.
+
+    Zertarako balio du: Testuak eta argazkiak erraz igotzeko, denbora zein dirua aurrezteko, eta pertsona batzuek elkarrekin lan egiteko.
+
+    Nork erabiltzen du: Dendek, enpresek, albiste-orriek eta webgune bat nahi duen edonork.
+
+    Ospetsuenak:
+
+        WordPress: Munduko erabiliena ia mota guztietako orrietarako.
+
+        Shopify: Interneten gauzak saltzeko errazena.
+
+        Wix: Hasiberrientzat egokiena, elementuak saguarekin mugituz oso erraz diseinatzen delako.
