@@ -1,0 +1,12 @@
+WordPress munduan gehien erabiltzen den CMSa da (%40 baino gehiago), koderik gabe mota guztietako webguneak sortzeko tresna doakoa eta malgua.
+
+Ezaugarri Nagusiak
+
+    Doakoa eta irekia: Edozeinek deskargatu, erabili eta doitu dezake.
+
+    Erraza eta kustomizagarria: Bloke bidezko editorea du, eta milaka txantiloi (itxura) zein plugin (funtzionalitate berriak) eskaintzen ditu.
+
+    Optimizatua: SEOrako prestatuta dago eta komunitate erraldoia du atzean laguntza lortzeko.
+
+Adibide Erreala: TechCrunch
+Teknologia-egunkari digital ezagun honek WordPress erabiltzen du edukiak azkar eta aldi berean argitaratzeko, baita eguneroko milioika bisitarien trafiko handia arazorik gabe kudeatzeko ere.
