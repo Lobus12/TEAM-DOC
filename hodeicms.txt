@@ -1,0 +1,17 @@
+Diseinuaren eta edukiaren bereizketa: Alde batetik edukia (backend) kudeatzen da, eta bestetik erabiltzaileak ikusten duena (frontend plantilla edo gaien bidez). Horri esker, itxura alda daiteke informazioa ukitu gabe.
+
+Erabilerraza eta intuitiboa: Ez da programazio-ezagutza aurreraturik behar (HTML edo CSS gabe) artikuluak, orriak edo produktuak argitaratzeko.
+
+Rol eta baimenen kudeaketa: Sarbide-maila desberdinak ezartzen dira (administratzailea, editorea, etab.), bakoitzak zer egin dezakeen kontrolatzeko.
+
+Modulartasuna: Plugin edo moduluen bidez funtzio berriak gehitu daitezke erraz.
+
+Multimedia liburutegia: Irudiak, bideoak eta dokumentuak modu zentralean kudeatzeko aukera ematen du.
+
+SEO optimizazioa: Bilatzaileetan posizionamendua errazteko tresnak edo gehigarriak eskaintzen ditu.
+
+
+Hona hemen adibide erreal eta ezagun bat webgune batekin eta bere estekarekin:
+
+* **Webgunea:** **[Euskaraldiaren Denda](https://www.google.com/search?q=https://denda.euskaraldiaren.eus/&utm_source=gemini)** (Euskaraldiaren produktu ofizialak eta materiala erosteko webgunea).
+* **Nola erabiltzen duen CMSa:** Webgune honek merkataritza elektronikoko sistema bat (CMS e-commerce motakoa) erabiltzen du bere produktuak erakusteko, saskira gehitzeko eta eskaerak online kudeatzeko. Arduradunek ez dute kodea idatzi behar produktu berriak sartzeko edo stocka eguneratzeko; panel baten bidez kontrolatzen dute denda osoa.
