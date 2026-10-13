@@ -1,5 +1,4 @@
 
-```markdown
 ---
 title: Sistemas Eragileak Administratzea (SEA) - Active Directory, GPO, Inprimaketa eta Prozesuak
 ---
