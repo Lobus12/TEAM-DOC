@@ -2,6 +2,8 @@
 title: WordPress
 ---
 
+[← Hasiera](../../index.md) · [Modulua](index.md)
+
 # WordPress – Web Korporatiboa (IIS + MariaDB Remoto) ✅
 
 ## Aukerak eta erabakia
@@ -118,8 +120,11 @@ Hiru txantiloi aztertu dira BioHealth-en webgune korporatiborako:
 
 **Erabakia: Astra.**
 - **Errendimendua:** Txantiloi arinenetakoa, errendimendu bikainarekin IIS zerbitzarian.
+
 - **Erabilgarritasuna:** Personalizadorea erraza da; harrerako langileek (Editor) ez dute gune-editorerik ukitu behar.
+
 - **CSS:** *CSS adicional* atala zuzenean dakar, BioHealth-en kolore korporatiboak aplikatzeko.
+
 
 ![Astra Aktiboa](../../irudiak/WAE/wp-astra-aktiboa.png)
 *Irudia: «Nuevo tema activado» → **Activo: Astra**. ✅*
@@ -165,59 +170,3 @@ h1, h2, h3, .entry-title a {
 .entry-content h1 {
     font-size: clamp(2rem, 4vw, 3.2rem);
 }
-```
-
-![CSS Ondoren](../../irudiak/WAE/wp-css-ondoren.png)
-*Irudia: Argitaratu ondoren, `192.168.10.1/wordpress/`: goiburua kolore korporatiboarekin eta logo pertsonalizatuarekin. ✅*
-
----
-
-## HTTPS / SSL IIS-en ✅
-
-Saio-hasierak eta datu medikoen trafikoa babesteko, SSL/TLS ziurtagiria ezarri da IIS zerbitzarian.
-
-1. **IIS Binding:** IIS Server-en 443 portuko Binding-a gehitu da `www.biohealth.local` ostalari-izenarekin eta auto-sinatutako SSL ziurtagiruarekin.
-2. **WordPress URL Ezarpena:** *Ajustes → Generales* atalean bi URLak `https://www.biohealth.local/wordpress` gisa konfiguratu dira.
-3. **HTTP → HTTPS Birbideratzea (`web.config`):**
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <system.webServer>
-    <rewrite>
-      <rules>
-        <rule name="HTTP to HTTPS Redirect" stopProcessing="true">
-          <match url="(.*)" />
-          <conditions>
-            <add input="{HTTPS}" pattern="off" ignoreCase="true" />
-          </conditions>
-          <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" redirectType="Permanent" />
-        </rule>
-      </rules>
-    </rewrite>
-  </system.webServer>
-</configuration>
-```
-
-![HTTPS Nabigatzailean](../../irudiak/WAE/wp-https-birbideratuta.png)
-*Irudia: Nabigatzailean `http://` idatzi eta automatikoki `https://`-ra birbideratuta. Trafikoa enkriptatuta dago. ✅*
-
----
-
-## Segurtasuna (Hardening) ✅
-
-| Neurria | Nola | Zergatik |
-|---|---|---|
-| Admin izena ≠ `admin` | Erabiltzailea = `bioadmin` | Indar gordinezko erasoek `admin` probatzen dute lehenik |
-| Pribilegio txikiena | Langileak **Editor** rolarekin | Ezin dituzte pluginak edo txantiloiak instalatu |
-| HTTPS + 80→443 | IIS URL Rewrite | Pasahitzak eta cookieak zifratuta bidaiatzeko |
-| **Fitxategi-editorea desgaituta** | `wp-config.php`: `define('DISALLOW_FILE_EDIT', true);` | Admin saioa lapurtzen bada ere, ezin da PHP koderik txertatu panel bidez |
-| Datu-basea beste zerbitzari batean | MariaDB Ubuntu-n (`192.168.10.4`), `wae_user` bakarrik `192.168.10.1`-tik | Web zerbitzaria erasotua izanda ere, DBa bakartuta mantentzen da |
-
-PowerShell komandoa (`wp-config.php` aldatzeko Windows Server-en):
-```powershell
-Add-Content -Path "C:\inetpub\wwwroot\wordpress\wp-config.php" -Value "define('DISALLOW_FILE_EDIT', true);"
-```
-
-![Editorea Desgaituta](../../irudiak/WAE/wp-editor-desgaituta.png)
-*Irudia: Apariencia menuan ez da agertzen «Editor de archivos de temas/plugins». ✅*
