@@ -2,8 +2,6 @@
 title: WordPress
 ---
 
-[← Hasiera](../../index.md) · [Modulua](index.md)
-
 # WordPress – Web Korporatiboa (IIS + MariaDB Remoto) ✅
 
 ## Aukerak eta erabakia
