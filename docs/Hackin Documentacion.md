@@ -24,6 +24,9 @@ Lehenengo urrats teknikoa makina helburua enumeratzea izan da, eraso-azalera ide
 > * **139/tcp, 445/tcp atakak:** NetBIOS/SMB \- Samba 3.X  
 > * **1524/tcp ataka:** Bindshell (Metasploitable root shell)  
 > * **6667/tcp ataka:** IRC \- UnrealIRCd
+>
+> * ![Uploading Captura de pantalla 2026-10-14 083501.png…]()
+
 
 ### **2.2. Ahultasunen Analisia (Análisis de Vulnerabilidades)**
 
