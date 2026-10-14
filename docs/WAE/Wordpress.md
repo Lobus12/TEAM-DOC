@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Wordpress
+title: WordPress
 ---
-
 
 # WordPress – Web Korporatiboa (IIS + MariaDB Remoto) ✅
 
@@ -15,17 +14,18 @@ title: Wordpress
 | Drupal | GPL · 0 € | Oso segurua eta indartsua | Zaila; web txiki edo korporatibo baterako gehiegizkoa |
 | Wix / Squarespace (SaaS) | Ordainpekoa (~15–30 €/hilabete) | Instalaziorik gabe | Ez da lokaleko IIS/MariaDB-n instalatzen; datuak hirugarren baten hodeian geratzen dira |
 
-**Erabakia: WordPress IIS 10-en (Windows Server) + MariaDB Remoto (Ubuntu Server).** BioHealth-en webgunea korporatiboa da (zerbitzuak, ordutegiak, kontaktua, telekontsultarako esteka). Langile ez-teknikoek eguneratu behar dute (Editor rola) eta 0 €-ko kostua du. Segurtasuna: IIS web zerbitzaria DMZ/LAN eremuan kokatuta dago (`192.168.10.1`), datu-basea LAN isolatuan (`192.168.10.4`), eta komunikazioa HTTPS bidez zifratuta.
+**Erabakia: WordPress IIS 10-en (Windows Server) + MariaDB Remoto (Ubuntu Server).** ServerToYou-en (STY) webgune korporatiboa da (zerbitzuak, hosting-planak, FAQ eta harremanetarako estekak). Langile ez-teknikoek zein kudeatzaileek eguneratu dezakete (Editor rola) eta 0 €-ko kostua du. Segurtasuna: IIS web zerbitzaria DMZ/LAN eremuan kokatuta dago (`192.168.10.1`), datu-basea LAN isolatuan (`192.168.10.4`), eta komunikazioa HTTPS bidez zifratuta.
 
 ## Webaren erabilera ↔ CMSaren funtzionalitatea
 
-| BioHealth-en beharra | WordPress-en funtzionalitatea |
+| ServerToYou-en beharra | WordPress-en funtzionalitatea |
 |---|---|
-| Kontsulta-zerbitzuak eta espezialitateak erakutsi | Orriak (Pages) |
-| Albisteak / osasun-aholkuak argitaratu | Sarrerak (Posts) eta Kategoriak |
-| Harrerako langileek edukia eguneratu | **Editor** rola (argitaratu bai, konfiguratu ez) |
-| Telekontsulta eta hitzorduak | Jitsi Meet / kanpoko zerbitzuetarako esteka (`meet.biohealth.local`) |
-| Irudi korporatiboa eta irisgarritasuna | Astra Txantiloia + CSS pertsonalizatua |
+| Zerbitzuak eta azpiegitura-soluzioak erakutsi | Landing Page egituratua / Orriak (Pages) |
+| Hosting-planak eta tarifak aurkeztu | Bloke-editore (Gutenberg) bidezko taula eta txartelak |
+| Berriak / azpiegitura-aholkuak argitaratu | Sarrerak (Posts) eta Kategoriak |
+| Harrerako edo eduki-kudeaketako langileek edukiak eguneratu | **Editor** rola (argitaratu bai, konfiguratu ez) |
+| Bezeroentzako arreta eta aurrekontu-eskaerak | Harremanetarako botoiak eta mailto/tel estekak (`hola@servertoyou.com`) |
+| Irudi korporatiboa eta irisgarritasuna | Astra Txantiloia + Gutenberg Bloke-sistema eta estilodun interfazea |
 
 ## Instalazio-parametroak
 
@@ -33,7 +33,7 @@ title: Wordpress
 |---|---|
 | Web Zerbitzaria | Windows Server (IIS 10.0) · `192.168.10.1` |
 | Web Engine | FastCGI / PHP 8.5.0 (`C:\php\php-cgi.exe`) |
-| WordPress Bertsioa | 6.5.x (Euskaraz / Gaztelaniaz) |
+| WordPress Bertsioa | 6.5.x / 7.x (Euskaraz / Gaztelaniaz) |
 | DocumentRoot | `C:\inetpub\wwwroot\wordpress` |
 | IIS AppPool | `DefaultAppPool` (No Managed Code, ApplicationPoolIdentity) |
 | NTFS Baimenak | `IUSR` (Irakurri/Exekutatu), `IIS_IUSRS` (Irakurri/Idatzi `wp-content` karpetan) |
@@ -41,11 +41,11 @@ title: Wordpress
 | Datu-basearen izena | `waedb` |
 | DB Erabiltzailea | `wae_user` @ `192.168.10.1` (Pasahitza: `Admin123`) |
 | Logak (IIS) | `C:\inetpub\logs\LogFiles\W3SVC1\` |
-| HTTPS / SSL | ✅ 443 TCP · IIS Binding (`www.biohealth.local`) · OpenSSL / Self-Signed |
+| HTTPS / SSL | ✅ 443 TCP · IIS Binding (`www.sty.eus`) · OpenSSL / Self-Signed |
 
-SQL konfigurazio-scripta: [`scripts/wp-db-setup.sql`](https://github.com/prietosuhar/biohealth-erronka1/blob/main/scripts/wp-db-setup.sql) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < wp-db-setup.sql`).
+SQL konfigurazio-scripta: [`scripts/wp-db-setup.sql`](https://github.com/Lobus12/TEAM-DOC/blob/main/docs/Documentacion%20DataB.md) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < wp-db-setup.sql`).
 
-![IIS WordPress App](../../irudiak/WAE/wp-iis-binding.png)
+![WordPress IIS FastCGI HTTPS](../../irudiak/WAE/wordpress-iis-php-https.png)
 *Irudia: IIS Kudeatzailean WordPress direktorioa konfiguratuta, PHP FastCGI bidez mapeatuta eta HTTPS 443 portuan entzuten. ✅*
 
 ### Arazoak
@@ -59,7 +59,7 @@ SQL konfigurazio-scripta: [`scripts/wp-db-setup.sql`](https://github.com/prietos
 
 ## Web-instalatzailea ✅
 
-Windows Server edo LANeko edozein ekiporen Edge nabigatzailetik `http://192.168.10.1/wordpress/` helbidera sartuta:
+Windows Server edo LANeko edozein ekiporen nabigatzailetik `http://192.168.10.1/wordpress/` helbidera sartuta:
 
 | Urratsa | Balioa |
 |---|---|
@@ -67,9 +67,9 @@ Windows Server edo LANeko edozein ekiporen Edge nabigatzailetik `http://192.168.
 | Datu-basearen zerbitzaria | `192.168.10.4` |
 | Datu-basearen izena | `waedb` |
 | Erabiltzailea / Pasahitza | `wae_user` / `Admin123` |
-| Taulen aurrizkia | `wp_bh_` (Segurtasunagatik, lehenetsitako `wp_` aldatuta) |
-| Gunearen Izenburua | BioHealth |
-| Administratzaile Erabiltzailea | `bioadmin` (ez `admin`: erasoetan probatzen den lehen izena) · pasahitz sendoa |
+| Taulen aurrizkia | `wp_sty_` (Segurtasunagatik, lehenetsitako `wp_` aldatuta) |
+| Gunearen Izenburua | ServerToYou |
+| Administratzaile Erabiltzailea | `bioadmin` / `admin` (pasahitz sendoarekin babestua) |
 | Bilatzaileak | «Disuadir a los motores de búsqueda» markatuta (barneko laborategia) |
 
 | Arazoa | Kausa | Konponbidea |
@@ -77,96 +77,62 @@ Windows Server edo LANeko edozein ekiporen Edge nabigatzailetik `http://192.168.
 | «Error al establecer una conexión con la base de datos» | Ubuntu zerbitzariko MariaDB-k `127.0.0.1` helbidean bakarrik entzuten zuen edo `bind-address` mugatuta zegoen | `/etc/mysql/mariadb.conf.d/50-server.cnf` fitxategian `bind-address = 0.0.0.0` ezarri eta MariaDB zerbitzua berriro kargatu (`sudo systemctl restart mariadb`) |
 
 ![WordPress Escritorio](../../irudiak/WAE/wp-escritorio.png)
-*Irudia: `bioadmin` erabiltzailearekin administrazio-panelean (Escritorio) sartuta, `192.168.10.1/wordpress/wp-admin` helbidean. ✅*
+*Irudia: Administrazio-panelean (Escritorio) sartuta, `http://192.168.10.1/wordpress/wp-admin/` helbidean. ✅*
 
 ---
 
 ## Erabiltzaileak eta pribilegioak ✅
 
-Pribilegio txikienaren printzipioa: administratzailea bakarra da (Informatika saila), eta harrerako langileek edukia bakarrik kudeatzen dute.
+Pribilegio txikienaren printzipioa: administratzailea bakarra da (Sistemak / IT saila), eta harrerako zein eduki kudeatzaileek webgunea bakarrik eguneratzen dute.
 
 | Erabiltzailea | Rola | Nork erabiltzen du | Zer egin dezake | Zer EZ |
 |---|---|---|---|---|
-| `bioadmin` | **Administrator** | Informatika-saila | Dena: pluginak, txantiloiak, ezarpenak, erabiltzaileak | — |
-| `harrera1` | **Editor** | Harrerako langileak | Sarrerak eta orriak sortu, editatu eta argitaratu; multimedia kudeatu | Pluginak, txantiloiak, ezarpenak edo erabiltzaileak kudeatu |
+| **`bioadmin`** | **Administrator** | IT Saila / Sistemak | Dena: pluginak, txantiloiak, ezarpenak, erabiltzaileak | — |
+| **`harrera1`** | **Editor** | Harrerako langileak / Komunikazioa | Sarrerak eta orriak sortu, editatu eta argitaratu; multimedia kudeatu | Pluginak, txantiloiak, ezarpenak edo erabiltzaileak kudeatu |
 
-Sortzeko: *Usuarios → Añadir nuevo usuario* → izena `harrera1`, posta `harrera1@biohealth.local`, *Perfil: Editor*.
+Sortzeko: *Usuarios → Añadir nuevo usuario* → izena `harrera1`, posta `harrera1@sty.local`, *Perfil: Editor*.
 
 ![WordPress Erabiltzaileak](../../irudiak/WAE/wp-erabiltzaileak.png)
 *Irudia: Bi erabiltzaileak kargatuta rol desberdinekin: `bioadmin` (Administrador) eta `harrera1` (Editor). ✅*
-
-### Probak
-
-![Editor Menua](../../irudiak/WAE/wp-editor-menua.png)
-*Irudia: `harrera1`-ekin sartuta, menua mugatuta dago: Entradas, Medios, Páginas, Comentarios, Perfil eta Herramientas bakarrik. Ez dira agertzen **Apariencia, Plugins, Usuarios eta Ajustes**. ✅*
-
-![Plugins Ukatua](../../irudiak/WAE/wp-editor-plugins-ukatua.png)
-*Irudia: Ukatze-proba: `harrera1`-ek `/wp-admin/plugins.php` helbidea zuzenean idatzita → «Lo siento, no tienes permisos para acceder a esta página». ❌ (esperotako portaera)*
 
 ---
 
 ## Txantiloiak ✅
 
-Hiru txantiloi aztertu dira BioHealth-en webgune korporatiborako:
+Hiru txantiloi aztertu dira ServerToYou-en webgune korporatiborako:
 
 | Ezaugarria | Twenty Twenty-Five | Astra | Neve |
 |---|---|---|---|
-| Mota | Bloke-txantiloia (FSE) | Klasikoa + Personalizadorea | Klasikoa + Personalizadorea |
+| Mota | Bloke-txantiloia (FSE) | Klasikoa + Personalizadorea / Blokeak | Klasikoa + Personalizadorea |
 | Egilea | WordPress (ofiziala) | Brainstorm Force | Themeisle |
 | Pisua / Abiadura | Oso arina | Oso arina (< 50 KB) | Oso arina |
 | Mugikorra (Responsive) | Bai | Bai | Bai |
 | Pertsonalizazioa | Bloke-editorea | Personalizadorea: koloreak, tipografia, **CSS adicional** | Personalizadorea, aukera gutxiago |
-| **Erabakia** | ❌ Baztertuta (zailagoa) | **✅ AUKERATUA** | ❌ Baztertuta |
+| **Erabakia** | ❌ Baztertuta | **✅ AUKERATUA** | ❌ Baztertuta |
 
 **Erabakia: Astra.**
 - **Errendimendua:** Txantiloi arinenetakoa, errendimendu bikainarekin IIS zerbitzarian.
-
-- **Erabilgarritasuna:** Personalizadorea erraza da; harrerako langileek (Editor) ez dute gune-editorerik ukitu behar.
-
-- **CSS:** *CSS adicional* atala zuzenean dakar, BioHealth-en kolore korporatiboak aplikatzeko.
-
+- **Erabilgarritasuna:** Gutenberg bloke-editorearekin integratzeaz gain, Personalizadorea oso erraza da; kudeatzaileek (Editor) ez dute gune-egitura arriskuan jartzen.
+- **CSS / Diseinua:** Gutenberg bloke pertsonalizatuekin erraz konbinatzen da, ServerToYou-en kolore korporatibo urdinak eta azpiegitura-itxura profesionala aplikatzeko.
 
 ![Astra Aktiboa](../../irudiak/WAE/wp-astra-aktiboa.png)
 *Irudia: «Nuevo tema activado» → **Activo: Astra**. ✅*
 
 ---
 
-## Diseinua eta CSS aldaketak ✅
+## Diseinua eta Web Gunearen Egitura ✅
 
-**Helburua:** Webgunea BioHealth-en irudi korporatibora egokitzea. Osasun-sektorean ohikoak diren kolore **berde-urdinxkak** (`#0f766e`) aukeratu dira.
+**Helburua:** Webgunea ServerToYou (STY) IT azpiegitura eta zerbitzuen irudi korporatibora egokitzea. IT sektorean ohikoak diren kolore **urdin ilun eta teknologikoak** (`#0f1e33`, `#2b4eff`, `#eef2f6`) erabili dira.
 
-**Non:** *Apariencia → Personalizar → CSS adicional*. CSSa datu-basean gordetzen da (`wp_posts`, `custom_css` mota), eta ez da txantiloiaren fitxategietan idazten (Astra eguneratzean ez da galtzen).
+Gutenberg bloke-editorearen bidez Landing Page modular eta profesional bat eraiki da (`http://192.168.10.1/wordpress/`):
 
-Kodea: [`scripts/biohealth.css`](https://github.com/prietosuhar/biohealth-erronka1/blob/main/scripts/biohealth.css)
+### Webgunearen Atalak:
+1. **Hero Header:** Aurkezpen nagusia eta ekintzarako botoiak (*Pedir presupuesto*, *Ver planes*).
+2. **Zerbitzuak (`#servicios`):** Hosting-a, backup automazioa eta 24/7 monitorizazio-zerbitzuak.
+3. **Hosting Planak (`#planes`):** Básico (9€/mes), Profesional (29€/mes) eta Dedicado (99€/mes) tarifak alderatzeko taulak.
+4. **Prozesua (`#proceso`):** Bezeroaren eskaeratik zerbitzaria martxan jartzerainoko 4 urratsak.
+5. **FAQ (`#faq`):** Migrazio, epe eta segurtasun-galdera nagusiak atal tolesgarrietan (`<details>`).
+6. **Harremanetarako Atala (`#contacto`):** Direct-mail (`hola@servertoyou.com`) eta telefono-estekak.
 
-```css
-:root {
-    --bh-nagusia: #0f766e;
-    --bh-argia: #ccfbf1;
-    --bh-testua: #1e293b;
-}
-
-/* Goiburua eta Menua */
-.site-header, .main-header-bar {
-    background-color: var(--bh-nagusia) !important;
-}
-
-.site-title a, .main-header-menu a {
-    color: #ffffff !important;
-}
-
-/* Izenburuak eta Botoiak */
-h1, h2, h3, .entry-title a {
-    color: var(--bh-nagusia);
-}
-
-.button, input[type="submit"] {
-    background-color: var(--bh-nagusia) !important;
-    border-radius: 6px;
-    color: #ffffff !important;
-}
-
-/* Responsiboa izenburu nagusian */
-.entry-content h1 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-}
+![WordPress Web Hasiera](../../irudiak/WAE/wp-web-hasiera.png)
+*Irudia: ServerToYou enpresaren landing page nagusia WordPress Gutenberg bloke bidez diseinatua eta argitaratua (`http://192.168.10.1/wordpress/`). ✅*
