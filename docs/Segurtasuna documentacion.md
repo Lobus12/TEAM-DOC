@@ -47,3 +47,34 @@ Segurtasun-urraketa edo zibereraso bat gertatuz gero:
 2. **Azterketa**: Segurtasun-arduradunak gorabeheraren jatorria eta irismena ikertuko ditu.
 3. **Berreskuratzea**: Kaltetutako sistemak garbitu eta azken babeskopia segurutik leheneratuko dira.
 4. **Txostena**: Gertatutakoaren eta hartutako neurrien txosten bat idatziko da, etorkizunean arazo bera ez errepikatzeko.
+
+7. Kontingentzia Plana
+Erakundearen jardueraren jarraitutasuna bermatzeko eta ezustekoen aurrean erantzun egokia emateko, honako Kontingentzia Plana garatu da.
+
+7.1. Enpresaren deskribapena
+BioHealth osasun-sektoreko eta ikerketako enpresa bat da. Bere jarduera nagusia datu sentikorren (pazienteen datuak, ikerketa medikoak) tratamenduan eta kudeaketan oinarritzen da. Hori dela eta, ezinbestekoa da informazioaren konfidentzialtasuna, osotasuna eta erabilgarritasuna bermatzea uneoro, zerbitzuaren eten batek edo datu-filtrazio batek ondorio legal eta ekonomiko larriak ekar ditzakeelako.
+
+7.2. Aktiboen azterketa (INCIBE - PILAR tresna)
+Aktiboen azterketa sakona egin da INCIBEren PILAR (Magerit metodologia) tresna erabiliz. Identifikatutako aktibo kritiko nagusiak honako hauek dira:
+- Informazio-aktiboak: Pazienteen datu-basea (MariaDB), ikerketa-fitxategiak, langileen datuak.
+- Hardware-aktiboak: Web zerbitzariak (IIS), datu-base zerbitzaria (Ubuntu), suebakia (pfSense), eta biltegiratze-sistemak (NAS/SAN).
+- Software-aktiboak: GLPI (intzidentzien kudeaketa), WordPress (web korporatiboa).
+PILAR tresnaren bidez aktibo hauen balioespena egin da (Dimentsioak: Konfidentzialtasuna, Osotasuna, Trazabilitatea, Autentikotasuna eta Erabilgarritasuna), eta horien araberako babes-neurriak diseinatu dira.
+
+7.3. Arrisku-kasuak (Escenarios de Riesgo)
+Identifikatutako aktiboetan oinarrituta, hiru arrisku-kasu nagusi aurreikusi dira eta bakoitzarentzako erantzun-plana zehaztu da:
+
+A. Arrisku-kasua: Ransomware erasoa datu-basean
+- Mehatxua: Ziberkriminalek MariaDB datu-basea zifratzea eta erreskatea eskatzea.
+- Erantzuna: Sistema berehala saretik isolatu (deskonektatu). Ez da inoiz erreskaterik ordainduko. 4. atalean aipatutako azken babeskopia segurua (off-site edo hodeikoa) erabiliko da sistemak berrezartzeko. RTO-a 4 ordukoa izango da.
+
+B. Arrisku-kasua: Sutea edo elektrizitate-etena Datuak Prozesatzeko Zentroan (DPZ)
+- Mehatxua: Suteen edo argindar faltaren ondorioz zerbitzari fisikoak itzaltzea edo kaltetzea.
+- Erantzuna: Etenik gabeko Elikatze Sistemak (SAI) zerbitzariak modu seguruan itzaliko ditu datuak ez usteltzeko. Sutea bada, FM-200 gas-sistemak itzaliko du. Kalte fisiko handia badago, hardware berria eskuratu eta hodeian dauden babeskopietatik birtualizazio bidez (Disaster Recovery) altxatuko dira zerbitzu kritikoak.
+
+C. Arrisku-kasua: Giza akatsa edo barne-mehatxua (Datu-filtrazioa)
+- Mehatxua: Langile batek, nahi gabe edo nahita, baimenik gabe informazio sentikorra ezabatzea edo filtratzea.
+- Erantzuna: GLPI eta sareko log-en bidez trazabilitatea aztertuko da nor izan den jakiteko. Erabiltzailearen kontua automatikoki blokeatuko da. Galdutako datuak azken RPO (24 ordu) babeskopiatik berreskuratuko dira.
+
+7.4. Dokumentazioaren eta neurrien justifikazioa
+Hartutako neurri guztiak (babeskopiak, suebakiak, rolak) PILAR tresnak emandako arrisku-mai
