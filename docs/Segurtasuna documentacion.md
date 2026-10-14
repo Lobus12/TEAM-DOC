@@ -24,14 +24,12 @@ Kanpoko langileek enpresako barne-sarera modu seguruan sartzeko OpenVPN zerbitza
 2. **Bezeroaren konfigurazio-esportazioa**: *openvpn-client-export* paketearen bidez konfigurazio bateratuak (.ovpn) deskargatzen dira.
 3. **Konexioaren egiaztapena**: Bezeroak OpenVPN Connect bidez autentifikatu eta tunel seguruaren IP bat eskuratzen du (`10.0.8.x` eremuan).
 
-![OpenVPN Client Export](../assets/img/vpn-pfsense-export.png)
-*Irudia: pfSense OpenVPN bezero-esportatzailea (`langile1` erabiltzailearen profila).*
+<img width="1204" height="589" alt="Captura de pantalla 2026-10-14 140210" src="https://github.com/user-attachments/assets/286b39ed-bcdd-431f-9c59-53dfb73b8aa7" />
 
-![OpenVPN Connect Bezeroa](../assets/img/vpn-connect-client.png)
-*Irudia: OpenVPN Connect bezeroaren autentifikazio-leihoa `192.168.120.142` suebakirantz.*
 
-> [!TIP]
-> **Egiaztapena Praktikan:** Bezero-ekipoan (Windows/Linux) konexioa burutzean, ikonoa berdez agertuko da eta `ipconfig` edo `ip a` komandoarekin egiaztatu daiteke tunelaren IP helbidea (`10.0.8.x`).
+<img width="488" height="833" alt="Captura de pantalla 2026-10-14 142219" src="https://github.com/user-attachments/assets/2e20d0b9-d427-460e-96cd-b34f8f073102" />
+
+<img width="1199" height="628" alt="Captura de pantalla 2026-10-14 185849" src="https://github.com/user-attachments/assets/010ddcc3-813f-46c5-8416-42b13e80a2f3" />
 
 
 ## 3. Sarbide Kontrola eta Pasahitzen Politika
