@@ -18,7 +18,7 @@ title: Hasiera
     <span class="hero-tag">🖨️ CUPS</span>
     <span class="hero-tag">⚔️ Pentesting & Kali</span>
     <span class="hero-tag">🌱 ESG & Jasangarritasuna</span>
-    <span class="hero-tag">🔌 Sareak</span>
+    <span class="hero-tag">📡 Sareak</span>
   </div>
 </div>
 
@@ -149,10 +149,10 @@ title: Hasiera
    <a href="{{ '/Redes' | relative_url }}" class="doc-card">
     <div>
       <div class="doc-card-header">
-        <span class="doc-card-icon">🔌</span>
+        <span class="doc-card-icon">📡</span>
         <span class="doc-badge badge-green">Dns, DHCP & Jitsi</span>
       </div>
-      <h3 class="doc-card-title">Sareak (IRAU)</h3>
+      <h3 class="doc-card-title">Sareak</h3>
       <p class="doc-card-desc">
         ESG irizpideak, IT ekipoen energia-eraginkortasuna, bizi-zikloaren luzapena eta hondakin elektronikoen kudeaketa.
       </p>
