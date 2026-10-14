@@ -1,3 +1,8 @@
+---
+layout: page
+title: Segurtasuna
+---
+
 # INFORMAZIOAREN SEGURTASUN DOKUMENTAZIOA
 
 ## 1. Sarrera eta Helburua
