@@ -26,7 +26,8 @@ Ireki terminala Ubuntu Serverren eta exekutatu:
 sudo apt update && sudo apt install mariadb-server -y
 ```
 
-![][image1]
+<img width="514" height="191" alt="Captura de pantalla 2026-10-14 190223" src="https://github.com/user-attachments/assets/957439c7-6476-4cfc-9304-f766665a8c4c" />
+
 
 ### 2.2. urratsa: Datu-baseak kudeatzeko sisteman urruneko sarbidea ahalbidetzea
 
@@ -58,15 +59,18 @@ Sartu MariaDBren kontsola interaktiboan:
 sudo mysql -u root -p
 ```
 
-**![][image2]**
+<img width="511" height="69" alt="irudia" src="https://github.com/user-attachments/assets/2c2d7489-1e15-476c-b5d7-fde86e129b19" />
+
 
 SQL instrukzio-bloke osoa exekutatzen du:
 
-**![][image3]**
+<img width="590" height="510" alt="irudia" src="https://github.com/user-attachments/assets/f7ae862a-d399-428a-b714-0a6659abddfc" />
+
 
 Gehitu dezagun beste erabiltzaile bat – Pribilegio gutxiagorekin:
 
-![][image4]
+<img width="756" height="169" alt="irudia" src="https://github.com/user-attachments/assets/4d21d3e0-e699-4551-9456-b5ca074580a6" />
+
 
 > [!TIP]
 > **MARIADB AMAITUTA**: Datu-baseak eta erabiltzaileak prest daude WordPress (`waedb`) eta GLPI (`glpidb`) zerbitzuekin urrunetik modu seguruan konektatzeko.
