@@ -92,9 +92,6 @@ Pribilegio txikienaren printzipioa: administratzailea bakarra da (Informatika sa
 
 Sortzeko: *Usuarios → Añadir nuevo usuario* → izena `harrera1`, posta `harrera1@sty.local`, *Perfil: Editor*.
 
-![WordPress Erabiltzaileak](../../irudiak/WAE/wp-erabiltzaileak.png)
-*Irudia: Bi erabiltzaileak kargatuta rol desberdinekin: `bioadmin` (Administrador) eta `harrera1` (Editor). ✅*
-
 ---
 
 ## Txantiloiak ✅
@@ -115,8 +112,7 @@ Hiru txantiloi aztertu dira ServerToYou-en webgune korporatiborako:
 - **Erabilgarritasuna:** Gutenberg bloke-editorearekin integratzeaz gain, Personalizadorea oso erraza da; kudeatzaileek (Editor) ez dute gune-egitura arriskuan jartzen.
 - **CSS / Diseinua:** Gutenberg bloke pertsonalizatuekin erraz konbinatzen da, ServerToYou-en kolore korporatiboak eta azpiegitura-itxura profesionala aplikatzeko.
 
-![Astra Aktiboa](../../irudiak/WAE/wp-astra-aktiboa.png)
-*Irudia: «Nuevo tema activado» → **Activo: Astra**. ✅*
+<img width="1733" height="1224" alt="Captura de pantalla 2026-10-14 a las 19 53 56" src="https://github.com/user-attachments/assets/70587de7-cb9f-480d-bae6-c5fa4594ae06" />
 
 ---
 
@@ -134,5 +130,4 @@ Gutenberg bloke-editorearen bidez Landing Page modular eta profesional bat eraik
 5. **FAQ (`#faq`):** Migrazio, epe eta segurtasun-galdera nagusiak atal tolesgarrietan (`<details>`).
 6. **Harremanetarako Atala (`#contacto`):** Direct-mail (`hola@servertoyou.com`) eta telefono-estekak.
 
-![WordPress Web Hasiera](../../irudiak/WAE/wp-web-hasiera.png)
-*Irudia: ServerToYou enpresaren landing page nagusia WordPress Gutenberg bloke bidez diseinatua eta argitaratua (`http://192.168.10.1/wordpress/`). ✅*
+<img width="1747" height="1152" alt="Captura de pantalla 2026-10-14 a las 19 56 07" src="https://github.com/user-attachments/assets/73d293f9-507d-463a-b581-f5364a5ef7f6" />
