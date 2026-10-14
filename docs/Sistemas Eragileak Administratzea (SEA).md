@@ -1,3 +1,8 @@
+---
+layout: page
+title: Sistema Eragileak
+---
+
 # Sistemas Eragileak Administratzea (SEA) ✅
 
 **Irakasgaia:** Sistemas Eragileak Administratzea (SEA)  
