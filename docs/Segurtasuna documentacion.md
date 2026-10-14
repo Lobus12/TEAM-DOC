@@ -48,7 +48,7 @@ Segurtasun-urraketa edo zibereraso bat gertatuz gero:
 3. **Berreskuratzea**: Kaltetutako sistemak garbitu eta azken babeskopia segurutik leheneratuko dira.
 4. **Txostena**: Gertatutakoaren eta hartutako neurrien txosten bat idatziko da, etorkizunean arazo bera ez errepikatzeko.
 
-7. Kontingentzia Plana
+## 7. Kontingentzia Plana
 Erakundearen jardueraren jarraitutasuna bermatzeko eta ezustekoen aurrean erantzun egokia emateko, honako Kontingentzia Plana garatu da.
 
 7.1. Enpresaren deskribapena
