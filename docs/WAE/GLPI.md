@@ -42,8 +42,8 @@ title: GLPI
 
 Instalazio-scripta / SQL: [`scripts/glpi-db-setup.sql`]https://github.com/Lobus12/TEAM-DOC/blob/main/docs/Documentacion%20DataB.md) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < glpi-db-setup.sql`).
 
-![GLPI 10 Public App IIS](../../irudiak/WAE/glpi-iis-public-app.png)
-*Irudia: IIS Kudeatzailean `public` azpikarpeta Aplikazio gisa bihurtuta eta `DefaultAppPool`-era esleituta. Documento predeterminado gisa `index.php` lehenengo postuan kokatuta. ✅*
+![GLPI 10 Public App IIS]
+IIS Kudeatzailean `public` azpikarpeta Aplikazio gisa bihurtuta eta `DefaultAppPool`-era esleituta. Documento predeterminado gisa `index.php` lehenengo postuan kokatuta. ✅*
 
 ### Arazoak
 
@@ -71,11 +71,10 @@ Windows Server edo LANeko edozein ekiporen nabigatzailetik `http://192.168.10.1/
 |---|---|---|
 | *"Can't connect to MySQL server on '192.168.10.4'"* | Ubuntu zerbitzariko MariaDB-k `127.0.0.1` helbidean bakarrik entzuten zuen | `/etc/mysql/mariadb.conf.d/50-server.cnf` fitxategian `bind-address = 0.0.0.0` ezarri eta `sudo systemctl restart mariadb` exekutatu |
 
-![GLPI Paso Requisitos](../../irudiak/WAE/glpi-instalazioa-requisitos.png)
-*Irudia: GLPI 10 ingurunearen egiaztapen-urratsa. PHP 8.5 eta hedapen guztiak (mysqli, mbstring, gd, intl, curl) berdez ageri dira [OK]. ✅*
+![GLPI Paso Requisitos]
+ GLPI 10 ingurunearen egiaztapen-urratsa. PHP 8.5 eta hedapen guztiak (mysqli, mbstring, gd, intl, curl) berdez ageri dira [OK]. ✅*
 
-![GLPI Instalazioa Amaituta](../../irudiak/WAE/glpi-instalazioa-amaituta.png)
-*Irudia: Instalazio-prozesuaren amaiera. Datu-basearen hasieratzea osatuta eta hasierako kredentzialak erakusten dira. ✅*
+![GLPI Instalazioa Amatuta]Instalazio-prozesuaren amaiera. Datu-basearen hasieratzea osatuta eta hasierako kredentzialak erakusten dira. ✅*
 
 ---
 
