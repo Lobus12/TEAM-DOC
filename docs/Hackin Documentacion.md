@@ -25,7 +25,8 @@ Lehenengo urrats teknikoa makina helburua enumeratzea izan da, eraso-azalera ide
 > * **1524/tcp ataka:** Bindshell (Metasploitable root shell)  
 > * **6667/tcp ataka:** IRC \- UnrealIRCd
 >
-> * ![Uploading Captura de pantalla 2026-10-14 083501.png…]()
+><img width="662" height="604" alt="Captura de pantalla 2026-10-14 083501" src="https://github.com/user-attachments/assets/666cf8c0-b3ad-42ea-94f7-ca71052f25d9" />
+
 
 
 ### **2.2. Ahultasunen Analisia (Análisis de Vulnerabilidades)**
