@@ -13,25 +13,21 @@ title: Sistema Eragileak
 
 ## 1. Direktorio Zerbitzua: Active Directory Egitura Logikoa (SEA: IE1) ✅
 
-BioHealth enpresaren baliabideak eta erabiltzaileak modu zentralizatuan kudeatzeko `sty.eus` Active Directory domeinua ezarri da. Hierarkia logikoa Unitate Antolatzaile (OU), Erabiltzaile eta Taldeen bidez egituratu da.
+ServersToYou enpresaren baliabideak eta erabiltzaileak modu zentralizatuan kudeatzeko `sty.eus` Active Directory domeinua ezarri da. Hierarkia logikoa Unitate Antolatzaile (OU), Erabiltzaile eta Taldeen bidez egituratu da.
 
 ### Egitura Logikoaren Parametroak
 
-| Osagaia | Balioa / Izena | Deskribapena / Erabilera BioHealth-en |
+| Osagaia | Balioa / Izena | Deskribapena / Erabilera ServersToYou-n |
 |---|---|---|
 | **Domeinu Nagusia** | `sty.eus` | Zentroko Active Directory domeinua |
-| **OU Nagusia** | `OU=BioHealth_Enpresa` | Enpresako osagai guztiak biltzen dituen erroko OUa |
+| **OU Nagusia** | `OU=ServersToYou_Enpresa` | Enpresako osagai guztiak biltzen dituen erroko OUa |
 | **Azpi-OUak** | `OU=Langileak`, `OU=Sistemak`, `OU=Zuzendaritza`, `OU=Makinak` | Sail eta ekipo motaren araberako isolamendua |
 | **Segurtasun Taldeak** | `GRP_Langileak`, `GRP_Sistemak`, `GRP_Zuzendaritza` | Sarbide baimenak taldeka esleitzeko |
-| **Erabiltzaile Kontuak** | `bio_admin`, `langile1`, `langile2`, `zuzendari1` | Bakoitza bere OUn eta taldean integratuta |
+| **Erabiltzaile Kontuak** | `sty_admin`, `langile1`, `langile2`, `zuzendari1` | Bakoitza bere OUn eta taldean integratuta |
 | **Domeinuko Ekipoak** | `WIN10-CLIENT1`, `JITIS` (Ubuntu) | Domeinura batutako bezeroak eta zerbitzariak |
 
-### Irudi Proposamena 1
-> **Proposatutako irudia:** `ad-estructura-ou.png`  
-> **Deskribapena:** Active Directory Usuarios y Equipos (`dsa.msc`) leihoaren captura. Ezkerreko zuhaitzean `sty.eus` domeinua zabalduta ikusi behar da `BioHealth_Enpresa` OUarekin eta bere azpi-OU guztiekin (`Langileak`, `Sistemak`, `Zuzendaritza`). Eskuineko panelean sortutako erabiltzaileak eta taldeak ikusi behar dira.
-
-![Active Directory Egitura eta OUak](../../irudiak/SEA/ad-estructura-ou.png)
-*Irudia 1: Active Directory-ko Unitate Antolatzaileen (OU), Taldeen eta Erabiltzaileen egitura logikoa `sty.eus` domeinuan. ✅*
+> [!NOTE]
+> 📷 **[HEMEN KAPTURA IPINI - AD Egitura]:** Active Directory Usuarios y Equipos (`dsa.msc`) leihoaren captura. Ezkerreko zuhaitzean `sty.eus` domeinua zabalduta ikusi behar da `ServersToYou_Enpresa` OUarekin eta bere azpi-OU guztiekin (`Langileak`, `Sistemak`, `Zuzendaritza`). Eskuineko panelean sortutako erabiltzaileak eta taldeak ikusi behar dira.
 
 ---
 
@@ -43,17 +39,13 @@ GPO (Group Policy Objects) bidez segurtasuna, konfigurazioak eta erabiltzaileen 
 
 | GPO Izena | Aplikazio Eremua (OU / Taldea) | Ezarritako Araua / Politika Zehatza | Mota |
 |---|---|---|---|
-| `GPO_General_BioHealth` | Erabiltzaile Guztiak (`OU=BioHealth_Enpresa`) | **Arau 1:** Control Panel eta Configuración sarbidea blokeatzea (`Prevent access to Control Panel and PC settings`). | Orokorra |
-| `GPO_General_BioHealth` | Erabiltzaile Guztiak (`OU=BioHealth_Enpresa`) | **Arau 2:** Atzeko irudi (Wallpaper) korporatiboa ezartzea eta aldaketak desgaitzea (`Desktop Wallpaper`). | Orokorra |
+| `GPO_General_ServersToYou` | Erabiltzaile Guztiak (`OU=ServersToYou_Enpresa`) | **Arau 1:** Control Panel eta Configuración sarbidea blokeatzea (`Prevent access to Control Panel and PC settings`). | Orokorra |
+| `GPO_General_ServersToYou` | Erabiltzaile Guztiak (`OU=ServersToYou_Enpresa`) | **Arau 2:** Atzeko irudi (Wallpaper) korporatiboa ezartzea eta aldaketak desgaitzea (`Desktop Wallpaper`). | Orokorra |
 | `GPO_Langileak_Restriccion` | `OU=Langileak` (`GRP_Langileak`) | **Arau 3:** USB biltegiratze-gailuen idazketa/irakurketa blokeatzea (`Removable Disks: Deny all access`). | Zehatza |
 | `GPO_Langileak_Restriccion` | `OU=Langileak` (`GRP_Langileak`) | **Arau 4:** Agindu-kontsola (`cmd.exe`) eta PowerShell exekutatzea blokeatzea (`Prevent access to the command prompt`). | Zehatza |
 
-### Irudi Proposamena 2
-> **Proposatutako irudia:** `gpo-administrador-politicas.png`  
-> **Deskribapena:** Administrador de Directivas de Grupo (`gpmc.msc`) leihoaren captura. Ezkerreko zuhaitzean `GPO_General_BioHealth` eta `GPO_Langileak_Restriccion` objektuak ikusi behar dira beren OU-ei lotuta (linked). Eskuineko panelean "Configuración" (Settings) fitxa hautatuta ikusi behar da aplikatutako arauekin.
-
-![GPO Kudeaketa eta Loturak](../../irudiak/SEA/gpo-administrador-politicas.png)
-*Irudia 2: Administrador de Directivas de Grupo panelean sortutako GPO orokor eta zehatzak `sty.eus` domeinuko OU-etan aplikatuta. ✅*
+> [!NOTE]
+> 📷 **[HEMEN KAPTURA IPINI - GPO Loturak]:** Administrador de Directivas de Grupo (`gpmc.msc`) leihoaren captura. Ezkerreko zuhaitzean `GPO_General_ServersToYou` eta `GPO_Langileak_Restriccion` objektuak ikusi behar dira beren OU-ei lotuta. Eskuineko panelean "Configuración" fitxa hautatuta ikusi behar da aplikatutako arauekin.
 
 ---
 
@@ -108,32 +100,22 @@ Windows Server zein Linux (Ubuntu CUPS) inguruneetan inprimaketa-zerbitzariak ko
 | `HP_Zuzendaritza_Win` | Windows Server (`192.168.10.1`) | `GRP_Zuzendaritza` (Inprimatu eta Kudeatu); `GRP_Langileak` (Ezeztatuta) | `\\192.168.10.1\HP_Zuzendaritza_Win` |
 | `CUPS_Lab_Inprimagailua` | Ubuntu Server (`192.168.10.3`) | `GRP_Langileak` eta `GRP_Sistemak` (Inprimatu soilik) | `http://192.168.10.3:631/printers/CUPS_Lab_Inprimagailua` |
 
-### C. Sistema Eragileen Arteko Cross-Platform Proba Cross-Tests
+### C. Sistema Eragileen Arteko Cross-Platform Proba Praktikoak (IE5 - %20) ✅
 
-1. **Windows Bezerotik Linux (CUPS) Inprimagailura:**
-* Windows 10 bezeroan IPP inprimagailu berria gehitu da: `http://192.168.10.3:631/printers/CUPS_Lab_Inprimagailua`. Inprimaketa proba **arrakastatsua** izan da.
+Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide praktikoak:
 
+1. **Windows 10/11 Bezerotik Linux (CUPS) Inprimagailura:**
+   * **Nola egin:** Windows bezeroan, ireki *Configuración > Dispositivos > Impresoras y escáneres > Agregar impresora*. Hautatu *"Seleccionar una impresora compartida por nombre"* eta sartu helbidea: `http://192.168.10.3:631/printers/CUPS_Lab_Inprimagailua`.
+   * **Egiaztapena:** Bidali proba-orria (*Imprimir página de prueba*).
+   * 📷 **[HEMEN KAPTURA IPINI - Windows -> CUPS]:** Windows-eko inprimatze-probarako leihoa eta Ubuntu CUPS web interfazean (`http://192.168.10.3:631/jobs`) ataza "completed" egoeran erakusten duen captura.
 
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
-* Linux ekipoz SMB/CIFS bidez konectatu da: `smb://192.168.10.1/HP_Zuzendaritza_Win` (domeinu-erabiltzaile bidez autentifikatuta). Inprimaketa proba **arrakastatsua** izan da.
+   * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
+   * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
+   * 📷 **[HEMEN KAPTURA IPINI - Linux -> Windows Server]:** Windows Server-eko *Administración de Impresión* (`printmanagement.msc`) colan Linuxetik jasotako lana ikusten den captura.
 
-
-
-### Irudi Proposamena 4
-
-> **Proposatutako irudia:** `win-print-management.png`
-> **Deskribapena:** Windows Server-eko *Administración de Impresión* (`printmanagement.msc`) leihoaren captura. Ezkerreko menuan inprimaketa-zerbitzaria eta partekatutako inprimagailuak (`HP_Zuzendaritza_Win`) erakutsi behar dira, Segurtasun fitxan esleitutako baimenekin (`GRP_Zuzendaritza`).
-
-### Irudi Proposamena 5
-
-> **Proposatutako irudia:** `cups-web-interface.png`
-> **Deskribapena:** Ubuntu Server-eko CUPS web interfazearen captura (`http://192.168.10.3:631/printers`). Partekatutako inprimagailua "Idle, accepting jobs, published on network" egoeran ikusi behar da, eta inprimatutako proba-orri baten erregistroarekin (Completed Jobs).
-
-
-*Irudia 4: Windows Server 2022-ko Administración de Impresión atala eta partekatutako inprimagailuaren baimenak. ✅*
-
-
-*Irudia 5: Ubuntu Server-eko CUPS web interfazea inprimagailua sarean argitaratuta duelarik. ✅*
+> [!TIP]
+> **Praktikarako Garrantzitsua (IE5):** Irakasleak proba hauek zuzenean ikustea eskatzen duenean, bi ekipoak piztuta izan eta lanak ilaran edo CUPS-eko atazen historian (`Completed Jobs`) erakustea funtsezkoa da.
 
 ---
 

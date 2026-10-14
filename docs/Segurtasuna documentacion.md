@@ -16,6 +16,24 @@ Sare korporatiboa mehatxuetatik babesteko, honako neurri hauek ezartzen dira:
 * **Urruneko Sarbidea**: Sare korporatibora kanpotik sartzeko, ezinbestekoa izango da VPN konexio seguru bat erabiltzea (adib.: OpenVPN edo IPsec), pasahitz eta ziurtagiri bidez babestuta. Ez da administrazio-porturik (SSH, RDP, WebGUI) zuzenean internetera irekiko.
 * **Komunikazio Seguruak**: Web zerbitzu guztiek HTTPS erabiliko dute, indarrean dauden TLS ziurtagiriekin.
 
+### 2.1. Urruneko Sarbidea: OpenVPN Ezarpena pfSense-n (RA3) ✅
+
+Kanpoko langileek enpresako barne-sarera modu seguruan sartzeko OpenVPN zerbitzaria konfiguratu da pfSense suebakian (`192.168.120.142:1194` UDP):
+
+1. **CA eta Erabiltzaile-ziurtagiriak**: Ziurtagiri-agintaritza lokal bat sortu da eta erabiltzaile bakoitzarentzat gako-bikote esklusiboa sortu da (`langile1` / `Langile1_Cert`).
+2. **Bezeroaren konfigurazio-esportazioa**: *openvpn-client-export* paketearen bidez konfigurazio bateratuak (.ovpn) deskargatzen dira.
+3. **Konexioaren egiaztapena**: Bezeroak OpenVPN Connect bidez autentifikatu eta tunel seguruaren IP bat eskuratzen du (`10.0.8.x` eremuan).
+
+![OpenVPN Client Export](../assets/img/vpn-pfsense-export.png)
+*Irudia: pfSense OpenVPN bezero-esportatzailea (`langile1` erabiltzailearen profila).*
+
+![OpenVPN Connect Bezeroa](../assets/img/vpn-connect-client.png)
+*Irudia: OpenVPN Connect bezeroaren autentifikazio-leihoa `192.168.120.142` suebakirantz.*
+
+> [!TIP]
+> **Egiaztapena Praktikan:** Bezero-ekipoan (Windows/Linux) konexioa burutzean, ikonoa berdez agertuko da eta `ipconfig` edo `ip a` komandoarekin egiaztatu daiteke tunelaren IP helbidea (`10.0.8.x`).
+
+
 ## 3. Sarbide Kontrola eta Pasahitzen Politika
 Erabiltzaileen eta administratzaileen sarbidea kontrolatzeko arauak:
 
@@ -57,11 +75,11 @@ Segurtasun-urraketa edo zibereraso bat gertatuz gero:
 Erakundearen jardueraren jarraitutasuna bermatzeko eta ezustekoen aurrean erantzun egokia emateko, honako Kontingentzia Plana garatu da.
 
 7.1. Enpresaren deskribapena
-BioHealth osasun-sektoreko eta ikerketako enpresa bat da. Bere jarduera nagusia datu sentikorren (pazienteen datuak, ikerketa medikoak) tratamenduan eta kudeaketan oinarritzen da. Hori dela eta, ezinbestekoa da informazioaren konfidentzialtasuna, osotasuna eta erabilgarritasuna bermatzea uneoro, zerbitzuaren eten batek edo datu-filtrazio batek ondorio legal eta ekonomiko larriak ekar ditzakeelako.
+ServersToYou azpiegitura teknologikoak, zerbitzarien kudeaketa eta sistemen mantentze-lanak eskaintzen dituen enpresa bat da. Bere jarduera nagusia bezeroen zein enpresaren datu korporatiboen tratamenduan eta kudeaketan oinarritzen da. Hori dela eta, ezinbestekoa da informazioaren konfidentzialtasuna, osotasuna eta erabilgarritasuna bermatzea uneoro, zerbitzuaren eten batek edo datu-filtrazio batek ondorio legal eta ekonomiko larriak ekar ditzakeelako.
 
 7.2. Aktiboen azterketa (INCIBE - PILAR tresna)
 Aktiboen azterketa sakona egin da INCIBEren PILAR (Magerit metodologia) tresna erabiliz. Identifikatutako aktibo kritiko nagusiak honako hauek dira:
-- Informazio-aktiboak: Pazienteen datu-basea (MariaDB), ikerketa-fitxategiak, langileen datuak.
+- Informazio-aktiboak: Bezeroen eta enpresaren datu-baseak (MariaDB), kudeaketa-fitxategiak, langileen datuak.
 - Hardware-aktiboak: Web zerbitzariak (IIS), datu-base zerbitzaria (Ubuntu), suebakia (pfSense), eta biltegiratze-sistemak (NAS/SAN).
 - Software-aktiboak: GLPI (intzidentzien kudeaketa), WordPress (web korporatiboa).
 PILAR tresnaren bidez aktibo hauen balioespena egin da (Dimentsioak: Konfidentzialtasuna, Osotasuna, Trazabilitatea, Autentikotasuna eta Erabilgarritasuna), eta horien araberako babes-neurriak diseinatu dira.

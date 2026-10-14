@@ -94,7 +94,7 @@ Segurtasun eta bateragarritasun estandarrak mantentzeko, ekipo guztiek honakoak 
 
 ## 6. Azpiegitura Nagusia (Zerbitzaria, Sarea eta Kopiak)
 
-Enpresaren oinarria eusteko, honako azpiegitura ezarri da (eredua: BioHealth diseinua)[cite: 30]:
+Enpresaren oinarria eusteko, honako azpiegitura ezarri da (eredua: ServerToYou diseinua)[cite: 30]:
 
 *   **Zerbitzaria (Proxmox VE)**: Dell PowerEdge markako dorre bat. Bertan exekutatuko dira Windows Server (Active Directory, DNS, DHCP) eta barne zerbitzuak kudeatzeko Linux makina birtualak[cite: 30].
 *   **Sarea**: TP-Link Omada (edo baliokidea) Switch kudeagarria PoE+ teknologiarekin, VLANak (LAN eta Gonbidatuen Wi-Fi) banatzeko. pfSense Firewall bat instalatuko da sareko segurtasuna bermatzeko (Protectli Vault batean exekutatuta)[cite: 30].
