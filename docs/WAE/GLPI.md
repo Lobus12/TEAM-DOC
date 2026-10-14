@@ -90,8 +90,7 @@ GLPI 10-ek default bidez lau erabiltzaile sortzen ditu profil desberdinekin. Seg
 | `normal` | `normal` | **Normal** | Sail arteko kudeatzaileak: Consultas e inventario básico |
 | `post-only` | `post-only` | **Post-only** | ServerToYou-eko gainerako langileak: Intzidentzia berriak sortu eta beren egoera ikusi |
 
-![GLPI Erabiltzaileak](../../irudiak/WAE/glpi-erabiltzaileak.png)
-*Irudia: GLPI 10eko erabiltzaileen kudeaketa atala (`Administración → Usuarios`). Hasierako kontuak kargatuta eta pasahitz berriekin babestuta. ✅*
+
 
 ---
 
@@ -102,3 +101,6 @@ Instalazioa amaitutakoan, GLPI 10-ek segurtasun-abisuekin ohartarazten du sistem
 1. **`install/install.php` fitxategia ezabatzea:**[cite: 1]
    ```powershell
    Remove-Item -Path "C:\inetpub\wwwroot\glpi\install\install.php" -Force
+
+<img width="1724" height="1290" alt="Captura de pantalla 2026-10-14 a las 19 28 33" src="https://github.com/user-attachments/assets/155f1bb6-fab4-40df-b789-eaac0d9585b6" />
+
