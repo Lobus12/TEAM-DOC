@@ -152,7 +152,7 @@ title: Hasiera
         <span class="doc-card-icon">🔌</span>
         <span class="doc-badge badge-green">Dns, DHCP & Jitsi</span>
       </div>
-      <h3 class="doc-card-title">Sareaak (IRAU)</h3>
+      <h3 class="doc-card-title">Sareak (IRAU)</h3>
       <p class="doc-card-desc">
         ESG irizpideak, IT ekipoen energia-eraginkortasuna, bizi-zikloaren luzapena eta hondakin elektronikoen kudeaketa.
       </p>
