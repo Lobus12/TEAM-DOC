@@ -1,5 +1,6 @@
 ---
-title: Hardwarea eta lizentziak
+layout: page
+title: Hardware
 ---
 
 # ServerToYou — Ekipoen txostena (HW/SW) eta Inbentarioa
