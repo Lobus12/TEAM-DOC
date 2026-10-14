@@ -1,5 +1,6 @@
 ---
-title: WordPress
+layout: page
+title: Wordpress
 ---
 
 
