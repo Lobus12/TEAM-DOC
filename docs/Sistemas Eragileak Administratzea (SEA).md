@@ -127,7 +127,3 @@ Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide
 | **AD / GPO** | GPOa ez zaio erabiltzaile jakin bati aplikatzen | Erabiltzailea ez zegoen GPOa lotuta dagoen OUaren barruan | Erabiltzailearen kontua dagokion Unitate Antolatzailera (`OU=Langileak`) mugitu `dsa.msc` bidez |
 | **CUPS / Linux** | Windows bezeroak ezin du CUPS inprimagailua saretik bilatu | CUPS-en `/etc/cups/cupsd.conf` fitxategian kanpoko sareko atzipenak blokeatuta zeuden | `cupsd.conf` fitxategian `Listen *:631` eta `<Location /> Allow All </Location>` ezarri eta `sudo systemctl restart cups` exekutatu |
 | **Windows Print** | Inprimagailua ezin da domeinuko bezerotik gehitu | Point and Print Restriction politikek ez zioten drimberra instalatzen uzten erabiltzaile arruntai | GPO bidez `Point and Print Restrictions` ezarpena desgaitu edo kontrolatzaile fidagarriak onartu |
-
-```
-
-```
