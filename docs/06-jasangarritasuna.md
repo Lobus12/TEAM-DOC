@@ -1,3 +1,8 @@
+---
+layout: page
+title: Iraunkortasuna
+---
+
 # IRAU: Jasangarritasuna eta Ingurumen/Gizarte Erronkak
 
 ---
