@@ -1,4 +1,4 @@
-<img width="1264" height="890" alt="Captura de pantalla 2026-10-14 a las 19 08 53" src="https://github.com/user-attachments/assets/03f984eb-67c7-4768-b9b1-dc00bfc20da6" />
+
 ---
 layout: page
 title: Sistema Eragileak
