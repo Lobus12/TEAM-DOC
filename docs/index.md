@@ -157,7 +157,7 @@ title: Hasiera
         ESG irizpideak, IT ekipoen energia-eraginkortasuna, bizi-zikloaren luzapena eta hondakin elektronikoen kudeaketa.
       </p>
     </div>
-    <span class="doc-card-link">Ikusi Jasangarritasuna &rarr;</span>
+    <span class="doc-card-link">Ikusi Sareak &rarr;</span>
   </a>
 
 </div>
