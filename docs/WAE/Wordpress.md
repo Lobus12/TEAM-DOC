@@ -70,7 +70,7 @@ Windows Server edo LANeko edozein ekiporen Edge nabigatzailetik `http://192.168.
 | Erabiltzailea / Pasahitza | `wae_user` / `Admin123` |
 | Taulen aurrizkia | `wp_sty_` (Segurtasunagatik, lehenetsitako `wp_` aldatuta) |
 | Gunearen Izenburua | ServerToYou |
-| Administratzaile Erabiltzailea | `bioadmin` / `admin` (pasahitz sendoarekin babestua) |
+| Administratzaile Erabiltzailea | `styadmin` / `admin` (pasahitz sendoarekin babestua) |
 | Bilatzaileak | «Disuadir a los motores de búsqueda» markatuta (barneko laborategia) |
 
 | Arazoa | Kausa | Konponbidea |
