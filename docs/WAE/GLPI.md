@@ -15,11 +15,11 @@ title: GLPI
 | OTRS / Otobo | AGPL · 0 € | Oso boteretsua intzidentzietan | Inbentario-kudeaketa ahulagoa; interfaze konplexua |
 | Spiceworks (SaaS) | Gratis (Iragarkiekin) | Instalaziorik gabe | Datuak hirugarren baten hodeian; iragarkiak; ez da lokalean instalatzen |
 
-**Erabakia: GLPI 10 (v10.0.17).** BioHealth-en IT azpiegiturako tresneria (zerbitzariak, ordenagailuak, inprimagailuak) kudeatzeko eta erabiltzaileen intzidentziak (tickets) bideratzeko aukeratu da. Segurtasuna eta arkitektura: IIS web zerbitzarian kokatuta DMZ/LAN eremuan (`192.168.10.1`), datu-basea MariaDB zerbitzari urrunekoan (`192.168.10.4:3306`).
+**Erabakia: GLPI 10 (v10.0.17).** ServerToYou-en IT azpiegiturako tresneria (zerbitzariak, ordenagailuak, inprimagailuak) kudeatzeko eta erabiltzaileen intzidentziak (tickets) bideratzeko aukeratu da. Segurtasuna eta arkitektura: IIS web zerbitzarian kokatuta DMZ/LAN eremuan (`192.168.10.1`), datu-basea MariaDB zerbitzari urrunekoan (`192.168.10.4:3306`).
 
 ## Sistemaren erabilera ↔ GLPIren funtzionalitatea
 
-| BioHealth-en beharra | GLPI 10-en funtzionalitatea |
+| ServerToYou-en beharra | GLPI 10-en funtzionalitatea |
 |---|---|
 | Ekipoen eta zerbitzarien inbentarioa | Inbentarioa (Equipos, Monitores, Software, Red) |
 | Erabiltzaileen intzidentziak bideratzea | Intzidentzia-sistema (Tickets / Peticiones) |
@@ -40,7 +40,7 @@ title: GLPI
 | IIS Permisoak | `IUSR` (Irakurketa/Exekuzioa), `IIS_IUSRS` (Aldaketa `files` eta `config` karpetetan) |
 | Hasierako URL-a | `http://192.168.10.1/glpi/public/` |
 
-Instalazio-scripta / SQL: [`scripts/glpi-db-setup.sql`](https://github.com/prietosuhar/biohealth-erronka1/blob/main/scripts/glpi-db-setup.sql) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < glpi-db-setup.sql`).
+Instalazio-scripta / SQL: [`scripts/glpi-db-setup.sql`]https://github.com/Lobus12/TEAM-DOC/blob/main/docs/Documentacion%20DataB.md) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < glpi-db-setup.sql`).
 
 ![GLPI 10 Public App IIS](../../irudiak/WAE/glpi-iis-public-app.png)
 *Irudia: IIS Kudeatzailean `public` azpikarpeta Aplikazio gisa bihurtuta eta `DefaultAppPool`-era esleituta. Documento predeterminado gisa `index.php` lehenengo postuan kokatuta. ✅*
@@ -83,12 +83,12 @@ Windows Server edo LANeko edozein ekiporen nabigatzailetik `http://192.168.10.1/
 
 GLPI 10-ek default bidez lau erabiltzaile sortzen ditu profil desberdinekin. Segurtasun arrazoiengatik eta pribilegio txikienaren printzipioa jarraituz, konfigurazioa doitu da:
 
-| Erabiltzailea | Hasierako Pasahitza | Rol/Profila | Erabilera BioHealth-en |
+| Erabiltzailea | Hasierako Pasahitza | Rol/Profila | Erabilera ServerToYou-en |
 |---|---|---|---|
 | `glpi` | `glpi` (Aldatuta) | **Super-Admin** | IT Saila: Sistemaren konfigurazioa, hedapenak, inbentario orokorra |
 | `tech` | `tech` | **Technicien** | Zerbitzu teknikoko langileak: Intzidentziak ebatzi eta esleitu |
 | `normal` | `normal` | **Normal** | Sail arteko kudeatzaileak: Consultas e inventario básico |
-| `post-only` | `post-only` | **Post-only** | BioHealth-eko gainerako langileak: Intzidentzia berriak sortu eta beren egoera ikusi |
+| `post-only` | `post-only` | **Post-only** | ServerToYou-eko gainerako langileak: Intzidentzia berriak sortu eta beren egoera ikusi |
 
 ![GLPI Erabiltzaileak](../../irudiak/WAE/glpi-erabiltzaileak.png)
 *Irudia: GLPI 10eko erabiltzaileen kudeaketa atala (`Administración → Usuarios`). Hasierako kontuak kargatuta eta pasahitz berriekin babestuta. ✅*
