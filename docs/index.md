@@ -1,5 +1,4 @@
-Jaja hola
-
-# Sí
-
-**soy** yo
+---
+layout: home
+title: Hasiera
+---
