@@ -1,7 +1,8 @@
 ---
 layout: page
-title: WordPress
+title: Wordpress
 ---
+
 
 # WordPress – Web Korporatiboa (IIS + MariaDB Remoto) ✅
 
@@ -45,8 +46,8 @@ title: WordPress
 
 SQL konfigurazio-scripta: [`scripts/wp-db-setup.sql`](https://github.com/Lobus12/TEAM-DOC/blob/main/docs/Documentacion%20DataB.md) — Ubuntu MariaDB zerbitzarian exekutatua (`mysql -u root -p < wp-db-setup.sql`).
 
-![WordPress IIS FastCGI HTTPS](../../irudiak/WAE/wordpress-iis-php-https.png)
-*Irudia: IIS Kudeatzailean WordPress direktorioa konfiguratuta, PHP FastCGI bidez mapeatuta eta HTTPS 443 portuan entzuten. ✅*
+<img width="1082" height="631" alt="Captura de pantalla 2026-10-14 a las 19 42 14" src="https://github.com/user-attachments/assets/90964569-05e3-49d1-8e3e-f8a614c86435" />
+
 
 ### Arazoak
 
@@ -59,7 +60,7 @@ SQL konfigurazio-scripta: [`scripts/wp-db-setup.sql`](https://github.com/Lobus12
 
 ## Web-instalatzailea ✅
 
-Windows Server edo LANeko edozein ekiporen nabigatzailetik `http://192.168.10.1/wordpress/` helbidera sartuta:
+Windows Server edo LANeko edozein ekiporen Edge nabigatzailetik `http://192.168.10.1/wordpress/` helbidera sartuta:
 
 | Urratsa | Balioa |
 |---|---|
@@ -76,19 +77,18 @@ Windows Server edo LANeko edozein ekiporen nabigatzailetik `http://192.168.10.1/
 |---|---|---|
 | «Error al establecer una conexión con la base de datos» | Ubuntu zerbitzariko MariaDB-k `127.0.0.1` helbidean bakarrik entzuten zuen edo `bind-address` mugatuta zegoen | `/etc/mysql/mariadb.conf.d/50-server.cnf` fitxategian `bind-address = 0.0.0.0` ezarri eta MariaDB zerbitzua berriro kargatu (`sudo systemctl restart mariadb`) |
 
-![WordPress Escritorio](../../irudiak/WAE/wp-escritorio.png)
-*Irudia: Administrazio-panelean (Escritorio) sartuta, `http://192.168.10.1/wordpress/wp-admin/` helbidean. ✅*
+<img width="1744" height="1290" alt="Captura de pantalla 2026-10-14 a las 19 44 58" src="https://github.com/user-attachments/assets/1b1da728-2396-4470-be02-4948b65928f8" />
 
 ---
 
 ## Erabiltzaileak eta pribilegioak ✅
 
-Pribilegio txikienaren printzipioa: administratzailea bakarra da (Sistemak / IT saila), eta harrerako zein eduki kudeatzaileek webgunea bakarrik eguneratzen dute.
+Pribilegio txikienaren printzipioa: administratzailea bakarra da (Informatika saila / Sistemak), eta harrerako zein eduki kudeatzaileek webgunea bakarrik eguneratzen dute.
 
 | Erabiltzailea | Rola | Nork erabiltzen du | Zer egin dezake | Zer EZ |
 |---|---|---|---|---|
-| **`bioadmin`** | **Administrator** | IT Saila / Sistemak | Dena: pluginak, txantiloiak, ezarpenak, erabiltzaileak | — |
-| **`harrera1`** | **Editor** | Harrerako langileak / Komunikazioa | Sarrerak eta orriak sortu, editatu eta argitaratu; multimedia kudeatu | Pluginak, txantiloiak, ezarpenak edo erabiltzaileak kudeatu |
+| **Administrator** | Informatika-saila | Dena: pluginak, txantiloiak, ezarpenak, erabiltzaileak | — |
+| **Editor** | Harrerako langileak | Sarrerak eta orriak sortu, editatu eta argitaratu; multimedia kudeatu | Pluginak, txantiloiak, ezarpenak edo erabiltzaileak kudeatu |
 
 Sortzeko: *Usuarios → Añadir nuevo usuario* → izena `harrera1`, posta `harrera1@sty.local`, *Perfil: Editor*.
 
@@ -113,7 +113,7 @@ Hiru txantiloi aztertu dira ServerToYou-en webgune korporatiborako:
 **Erabakia: Astra.**
 - **Errendimendua:** Txantiloi arinenetakoa, errendimendu bikainarekin IIS zerbitzarian.
 - **Erabilgarritasuna:** Gutenberg bloke-editorearekin integratzeaz gain, Personalizadorea oso erraza da; kudeatzaileek (Editor) ez dute gune-egitura arriskuan jartzen.
-- **CSS / Diseinua:** Gutenberg bloke pertsonalizatuekin erraz konbinatzen da, ServerToYou-en kolore korporatibo urdinak eta azpiegitura-itxura profesionala aplikatzeko.
+- **CSS / Diseinua:** Gutenberg bloke pertsonalizatuekin erraz konbinatzen da, ServerToYou-en kolore korporatiboak eta azpiegitura-itxura profesionala aplikatzeko.
 
 ![Astra Aktiboa](../../irudiak/WAE/wp-astra-aktiboa.png)
 *Irudia: «Nuevo tema activado» → **Activo: Astra**. ✅*
