@@ -1,0 +1,12 @@
+title: TEAM-DOC
+theme: minima
+
+header_pages:
+  - index.md
+  - Hackin Documentacion.md
+  - Segurtasuna documentacion.md
+  - Hardware.md
+  - 06-jasangarritasuna.md
+  - Sistemas Eragileak Administratzea (SEA).md
+  -GLPI.md
+  -Wordpress.md
