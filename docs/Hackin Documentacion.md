@@ -1,3 +1,8 @@
+---
+layout: page
+title: HACK / Pentesting
+---
+
 # **HACK: Pentesting eta Ahultasunen Azterketa** 
 
 ## **1\. Proba-ingurunea ezartzea (Infraestructura de pruebas)**
