@@ -1,3 +1,4 @@
+<img width="1264" height="890" alt="Captura de pantalla 2026-10-14 a las 19 08 53" src="https://github.com/user-attachments/assets/03f984eb-67c7-4768-b9b1-dc00bfc20da6" />
 ---
 layout: page
 title: Sistema Eragileak
@@ -26,8 +27,9 @@ ServersToYou enpresaren baliabideak eta erabiltzaileak modu zentralizatuan kudea
 | **Erabiltzaile Kontuak** | `sty_admin`, `langile1`, `langile2`, `zuzendari1` | Bakoitza bere OUn eta taldean integratuta |
 | **Domeinuko Ekipoak** | `WIN10-CLIENT1`, `JITIS` (Ubuntu) | Domeinura batutako bezeroak eta zerbitzariak |
 
-> [!NOTE]
-> 📷 **[HEMEN KAPTURA IPINI - AD Egitura]:** Active Directory Usuarios y Equipos (`dsa.msc`) leihoaren captura. Ezkerreko zuhaitzean `sty.eus` domeinua zabalduta ikusi behar da `ServersToYou_Enpresa` OUarekin eta bere azpi-OU guztiekin (`Langileak`, `Sistemak`, `Zuzendaritza`). Eskuineko panelean sortutako erabiltzaileak eta taldeak ikusi behar dira.
+<img width="1264" height="890" alt="Captura de pantalla 2026-10-14 a las 19 08 53" src="https://github.com/user-attachments/assets/58ab1bfa-bbf0-499b-a2be-93b569b31b97" />
+<img width="1258" height="877" alt="Captura de pantalla 2026-10-14 a las 19 09 01" src="https://github.com/user-attachments/assets/0f92e5ed-4653-4c8a-89b6-9d20f5082da4" />
+<img width="1261" height="889" alt="Captura de pantalla 2026-10-14 a las 19 09 10" src="https://github.com/user-attachments/assets/b6f979d2-a219-4d71-9f4b-7ec7a8875954" />
 
 ---
 
@@ -44,8 +46,7 @@ GPO (Group Policy Objects) bidez segurtasuna, konfigurazioak eta erabiltzaileen 
 | `GPO_Langileak_Restriccion` | `OU=Langileak` (`GRP_Langileak`) | **Arau 3:** USB biltegiratze-gailuen idazketa/irakurketa blokeatzea (`Removable Disks: Deny all access`). | Zehatza |
 | `GPO_Langileak_Restriccion` | `OU=Langileak` (`GRP_Langileak`) | **Arau 4:** Agindu-kontsola (`cmd.exe`) eta PowerShell exekutatzea blokeatzea (`Prevent access to the command prompt`). | Zehatza |
 
-> [!NOTE]
-> 📷 **[HEMEN KAPTURA IPINI - GPO Loturak]:** Administrador de Directivas de Grupo (`gpmc.msc`) leihoaren captura. Ezkerreko zuhaitzean `GPO_General_ServersToYou` eta `GPO_Langileak_Restriccion` objektuak ikusi behar dira beren OU-ei lotuta. Eskuineko panelean "Configuración" fitxa hautatuta ikusi behar da aplikatutako arauekin.
+<img width="1717" height="1219" alt="Captura de pantalla 2026-10-14 a las 19 11 46" src="https://github.com/user-attachments/assets/634b0b12-7b3d-4b48-b19f-f3d00ecf1c95" />
 
 ---
 
@@ -72,13 +73,7 @@ Restart-Service -Name DHCPServer -Force
 | `resmon.exe` (Monitor de Recursos) | Grafikoa | Sareko konexioak, fitxategien erabilera eta Active Directory (`ntds.exe`) prozesuaren karga aztertu. |
 | `Get-Process` / `Stop-Process` | PowerShell | Prozesu zehatzak izenez edo PID bidez identifikatu eta kudeatu. |
 
-### Irudi Proposamena 3
-
-> **Proposatutako irudia:** `sea-prozesuak-monitorizazioa.png`
-> **Deskribapena:** Windows Server-eko *Administrador de Tareas* edo *Monitor de Recursos* leihoaren captura. Bertan `NTDS` (Active Directory Services), `dns.exe` eta `svchost.exe` prozesuak exekuzioan eta baliabideen kontsumoa erakusten ikusi behar da.
-
-
-*Irudia 3: Sistemaren prozesuen kudeaketa eta Active Directory zerbitzuen monitorizazioa tresna grafiko zein komando bidez. ✅*
+<img width="1322" height="994" alt="Captura de pantalla 2026-10-14 a las 19 15 34" src="https://github.com/user-attachments/assets/52c55f24-e78f-4e13-9285-080e2601580e" />
 
 ---
 
@@ -112,7 +107,8 @@ Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
    * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
    * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
-   * 📷 **[HEMEN KAPTURA IPINI - Linux -> Windows Server]:** Windows Server-eko *Administración de Impresión* (`printmanagement.msc`) colan Linuxetik jasotako lana ikusten den captura.
+<img width="1316" height="991" alt="Captura de pantalla 2026-10-14 a las 19 18 37" src="https://github.com/user-attachments/assets/88b12a39-bd93-4878-a767-e5c99b1c01a7" />
+
 
 > [!TIP]
 > **Praktikarako Garrantzitsua (IE5):** Irakasleak proba hauek zuzenean ikustea eskatzen duenean, bi ekipoak piztuta izan eta lanak ilaran edo CUPS-eko atazen historian (`Completed Jobs`) erakustea funtsezkoa da.
