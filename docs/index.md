@@ -12,6 +12,7 @@ title: Hasiera
   <div class="hero-tags">
     <span class="hero-tag">🖥️ Windows Server 2022</span>
     <span class="hero-tag">🐧 Ubuntu Server</span>
+    <span class="hero-tag">🗄️ MariaDB (Ubuntu)</span>
     <span class="hero-tag">🌐 IIS & WordPress</span>
     <span class="hero-tag">🎫 GLPI 10</span>
     <span class="hero-tag">🖨️ CUPS</span>
@@ -23,6 +24,21 @@ title: Hasiera
 ## 📚 Dokumentazio Moduluak
 
 <div class="card-grid">
+
+  <!-- Card: MariaDB -->
+  <a href="{{ '/Documentacion DataB' | relative_url }}" class="doc-card">
+    <div>
+      <div class="doc-card-header">
+        <span class="doc-card-icon">🗄️</span>
+        <span class="doc-badge badge-blue">Datu-Baseak</span>
+      </div>
+      <h3 class="doc-card-title">Datu-Basea (MariaDB)</h3>
+      <p class="doc-card-desc">
+        MariaDB zerbitzariaren instalazioa Ubuntu Server-en, urruneko sarbidea (3306), waedb eta glpidb sorrera eta erabiltzaile-baimenak.
+      </p>
+    </div>
+    <span class="doc-card-link">Ikusi Datu-Basea &rarr;</span>
+  </a>
 
   <!-- Card 1: SEA -->
   <a href="{{ '/Sistemas Eragileak Administratzea (SEA)' | relative_url }}" class="doc-card">
@@ -141,7 +157,7 @@ Hona hemen azpiegituran integratuta dauden zerbitzari eta nodo nagusien laburpen
 |:---|:---|:---|:---|:---|
 | **DC & Web Server** | `192.168.10.1` | Windows Server 2022 | Active Directory (`sty.eus`), DNS, DHCP, GPO, IIS 10 (WordPress + GLPI) | [SEA]({{ '/Sistemas Eragileak Administratzea (SEA)' | relative_url }}) · [Web]({{ '/WAE/Wordpress' | relative_url }}) |
 | **Print Server** | `192.168.10.3` | Ubuntu Server | CUPS zerbitzaria sareko inprimagailuentzat | [SEA]({{ '/Sistemas Eragileak Administratzea (SEA)' | relative_url }}) |
-| **Datu-Base Zerbitzaria** | `192.168.10.4` | Ubuntu Server | MariaDB isolatua (`wordpressdb`, `glpidb`) | [WAE/GLPI]({{ '/WAE/GLPI' | relative_url }}) |
+| **Datu-Base Zerbitzaria** | `192.168.10.4` | Ubuntu Server | MariaDB urrunekoa (`waedb`, `glpidb`) | [MariaDB]({{ '/Documentacion DataB' | relative_url }}) |
 | **Bezero Ekipoak** | `192.168.10.150+` | Windows 10 / 11 | Domeinura konektatutako lan-estazioak | [Hardware]({{ '/Hardware' | relative_url }}) |
 | **Pentesting Lab (Atacante)** | `10.0.2.2` | Kali Linux | Segurtasun-auditoria eta ahultasunen eskaneatzea | [HACK]({{ '/Hackin Documentacion' | relative_url }}) |
 | **Pentesting Lab (Target)** | `10.0.2.3` | Metasploitable 2 | Proba kontrolatuetarako makina ahula | [HACK]({{ '/Hackin Documentacion' | relative_url }}) |

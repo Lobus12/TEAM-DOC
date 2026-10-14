@@ -5,6 +5,7 @@ theme: minima
 header_pages:
   - index.md
   - Sistemas Eragileak Administratzea (SEA).md
+  - Documentacion DataB.md
   - WAE/Wordpress.md
   - WAE/GLPI.md
   - Hackin Documentacion.md
