@@ -1,12 +1,13 @@
 title: TEAM-DOC
+description: Azpiegitura Teknologikoaren eta Sistemen Dokumentazio Zentralizatua
 theme: minima
 
 header_pages:
   - index.md
+  - Sistemas Eragileak Administratzea (SEA).md
+  - WAE/Wordpress.md
+  - WAE/GLPI.md
   - Hackin Documentacion.md
   - Segurtasuna documentacion.md
   - Hardware.md
   - 06-jasangarritasuna.md
-  - Sistemas Eragileak Administratzea (SEA).md
-  - GLPI.md
-  - Wordpress.md
