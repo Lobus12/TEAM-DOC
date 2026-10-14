@@ -1,5 +1,6 @@
 ---
-title: GLPI 10
+layout: page
+title: GLPI
 ---
 
 
