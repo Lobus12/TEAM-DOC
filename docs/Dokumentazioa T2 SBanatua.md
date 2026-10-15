@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sistema Banatuak)
+title: Sistema Banatuak
 ---
 ## **1\. Zergatik birtualizatu**
 
