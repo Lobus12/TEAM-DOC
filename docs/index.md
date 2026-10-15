@@ -19,6 +19,7 @@ title: Hasiera
     <span class="hero-tag">⚔️ Pentesting & Kali</span>
     <span class="hero-tag">🌱 ESG & Jasangarritasuna</span>
     <span class="hero-tag">📡 Sareak</span>
+    <span class="hero-tag">💾 Sistema Banatuak</span>
   </div>
 </div>
 
@@ -145,6 +146,7 @@ title: Hasiera
     </div>
     <span class="doc-card-link">Ikusi Jasangarritasuna &rarr;</span>
   </a>
+  
   <!-- Card 8: Sareak -->
    <a href="{{ '/Sareak' | relative_url }}" class="doc-card">
     <div>
@@ -159,7 +161,21 @@ title: Hasiera
     </div>
     <span class="doc-card-link">Ikusi Sareak &rarr;</span>
   </a>
-
+  
+  <!-- card 9: Sisema Banatuak -->
+<a href="{{ '/Dokumentazioa T2 SBanatua' | relative_url }}" class="doc-card">
+    <div>
+      <div class="doc-card-header">
+        <span class="doc-card-icon">💾</span>
+        <span class="doc-badge badge-amber">Sistema Banatuak</span>
+      </div>
+      <h3 class="doc-card-title">Sistema Banatuak</h3>
+      <p class="doc-card-desc">
+        Konfidentzialtasuna, osotasuna eta eskuragarritasuna bermatzeko segurtasun-gidalerroak, baimenak eta babes-neurriak.
+      </p>
+    </div>
+    <span class="doc-card-link">Ikusi Sistema Banatuak &rarr;</span>
+  </a>
 </div>
 
 ---
