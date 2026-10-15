@@ -3,6 +3,7 @@ layout: page
 title: Sareak
 ---
 ***SAREKO ZERBITZUAK***
+
 <img width="729" height="276" alt="imagen" src="https://github.com/user-attachments/assets/f700aad2-def2-4028-9309-8319d22a4a03" />
 
 Lehenik gure serbidorearen barruan, Agregar Roles y ezaugarriak emango diogu
