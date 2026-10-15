@@ -1,3 +1,7 @@
+---
+layout: page
+title: Sistema Banatuak)
+---
 ## **1\. Zergatik birtualizatu**
 
 Zerbitzu bakoitzak ordenagailu fisiko bat izango balu, makina asko erosi beharko genituzke eta gehienak denbora gehiena geldirik egongo lirateke. Birtualizatuta, zerbitzari fisiko bakar batek hainbat zerbitzu hartzen ditu, bakoitza bere makina birtualean edo edukiontzian.
