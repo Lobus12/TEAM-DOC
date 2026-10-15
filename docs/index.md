@@ -146,7 +146,7 @@ title: Hasiera
     <span class="doc-card-link">Ikusi Jasangarritasuna &rarr;</span>
   </a>
   <!-- Card 8: Sareak -->
-   <a href="{{ '/Redes' | relative_url }}" class="doc-card">
+   <a href="{{ '/Sareak' | relative_url }}" class="doc-card">
     <div>
       <div class="doc-card-header">
         <span class="doc-card-icon">📡</span>
