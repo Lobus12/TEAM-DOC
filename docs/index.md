@@ -150,11 +150,11 @@ title: Hasiera
     <div>
       <div class="doc-card-header">
         <span class="doc-card-icon">📡</span>
-        <span class="doc-badge badge-green">Dns, DHCP & Jitsi</span>
+        <span class="doc-badge badge-green">Sareak</span>
       </div>
       <h3 class="doc-card-title">Sareak</h3>
       <p class="doc-card-desc">
-        ESG irizpideak, IT ekipoen energia-eraginkortasuna, bizi-zikloaren luzapena eta hondakin elektronikoen kudeaketa.
+        Dns, DHCP & Jitsi
       </p>
     </div>
     <span class="doc-card-link">Ikusi Sareak &rarr;</span>
