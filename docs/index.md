@@ -171,7 +171,7 @@ title: Hasiera
       </div>
       <h3 class="doc-card-title">Sistema Banatuak</h3>
       <p class="doc-card-desc">
-        Konfidentzialtasuna, osotasuna eta eskuragarritasuna bermatzeko segurtasun-gidalerroak, baimenak eta babes-neurriak.
+        Proxmox
       </p>
     </div>
     <span class="doc-card-link">Ikusi Sistema Banatuak &rarr;</span>
