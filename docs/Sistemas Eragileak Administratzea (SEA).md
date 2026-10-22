@@ -111,9 +111,11 @@ Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
    * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
    * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
-   * **Egiaztapenaren irudia (CUPS atazen historia):**
+   <img width="1167" height="942" alt="Captura de pantalla 2026-10-21 095606" src="https://github.com/user-attachments/assets/0bf486d4-4fef-4423-805e-fdfbc7700ecd" />
 
-     ![CUPS ataza completado Windows-etik bidalita](Captura%20de%20pantalla%202026-10-22%20a%20las%208.04.45.png)
+
+   <img width="983" height="788" alt="Captura de pantalla 2026-10-21 095628" src="https://github.com/user-attachments/assets/c59e7e5d-443a-4b5d-a83c-f8bb739ed8d7" />
+
 
 
 > [!TIP]
