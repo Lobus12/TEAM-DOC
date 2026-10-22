@@ -97,18 +97,27 @@ Windows Server zein Linux (Ubuntu CUPS) inguruneetan inprimaketa-zerbitzariak ko
 
 ### C. Sistema Eragileen Arteko Cross-Platform Proba Praktikoak (IE5 - %20) ✅
 
-Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide praktikoak:
+Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibideak eta inprimatze-lanen azken egiaztapenak:
 
 1. **Windows 10/11 Bezerotik Linux (CUPS) Inprimagailura:**
    * **Nola egin:** Windows bezeroan, ireki *Configuración > Dispositivos > Impresoras y escáneres > Agregar impresora*. Hautatu *"Seleccionar una impresora compartida por nombre"* eta sartu helbidea: `http://192.168.10.3:631/printers/CUPS_Lab_Inprimagailua`.
    * **Egiaztapena:** Bidali proba-orria (*Imprimir página de prueba*).
-   * 📷 **[HEMEN KAPTURA IPINI - Windows -> CUPS]:** Windows-eko inprimatze-probarako leihoa eta Ubuntu CUPS web interfazean (`http://192.168.10.3:631/jobs`) ataza "completed" egoeran erakusten duen captura.
+   * **Egiaztapenaren irudiak (Windows eta CUPS completed):**
+
+     ![Windows-eko inprimagailuaren egoera](Captura%20de%20pantalla%202026-10-21%20095628.png)
+
+     ![Ubuntu CUPS ataza completado egoeran](Captura%20de%20pantalla%202026-10-22%20a%20las%208.04.24.png)
 
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
    * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
    * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
-<img width="1316" height="991" alt="Captura de pantalla 2026-10-14 a las 19 18 37" src="https://github.com/user-attachments/assets/88b12a39-bd93-4878-a767-e5c99b1c01a7" />
+   * **Egiaztapenaren irudia (CUPS atazen historia):**
 
+     ![CUPS ataza completado Windows-etik bidalita](Captura%20de%20pantalla%202026-10-22%20a%20las%208.04.45.png)
+
+
+> [!TIP]
+> **Praktikarako Garrantzitsua (IE5):** Irakasleak proba hauek zuzenean ikustea eskatzen duenean, bi ekipoak piztuta izan eta lanak ilaran edo CUPS-eko atazen historian (`Completed Jobs`) erakustea funtsezkoa da.
 
 > [!TIP]
 > **Praktikarako Garrantzitsua (IE5):** Irakasleak proba hauek zuzenean ikustea eskatzen duenean, bi ekipoak piztuta izan eta lanak ilaran edo CUPS-eko atazen historian (`Completed Jobs`) erakustea funtsezkoa da.
