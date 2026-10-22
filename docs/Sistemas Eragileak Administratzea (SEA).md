@@ -111,8 +111,8 @@ Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
    * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
    * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
-<img width="601" height="68" alt="Captura de pantalla 2026-10-22 a las 8 04 45" src="https://github.com/user-attachments/assets/d684349f-805d-414d-a5ea-4fba45fe628b" />
 <img width="605" height="493" alt="Captura de pantalla 2026-10-22 a las 8 04 41" src="https://github.com/user-attachments/assets/97fb7726-90d5-4fa5-980f-2446ae223c92" />
+<img width="601" height="68" alt="Captura de pantalla 2026-10-22 a las 8 04 45" src="https://github.com/user-attachments/assets/d684349f-805d-414d-a5ea-4fba45fe628b" />
 
 
 
