@@ -104,17 +104,17 @@ Errubrikak eskatzen dituen inprimaketa-proba gurutzatuak egiaztatzeko jarraibide
    * **Egiaztapena:** Bidali proba-orria (*Imprimir página de prueba*).
    * **Egiaztapenaren irudiak (Windows eta CUPS completed):**
 
-     ![Windows-eko inprimagailuaren egoera](Captura%20de%20pantalla%202026-10-21%20095628.png)
+   <img width="1167" height="942" alt="Captura de pantalla 2026-10-21 095606" src="https://github.com/user-attachments/assets/0bf486d4-4fef-4423-805e-fdfbc7700ecd" />
 
-     ![Ubuntu CUPS ataza completado egoeran](Captura%20de%20pantalla%202026-10-22%20a%20las%208.04.24.png)
+   <img width="983" height="788" alt="Captura de pantalla 2026-10-21 095628" src="https://github.com/user-attachments/assets/c59e7e5d-443a-4b5d-a83c-f8bb739ed8d7" />
 
 2. **Linux Bezerotik Windows Server Partekatutako Inprimagailura:**
    * **Nola egin:** Linux ekipoan (terminaletik edo interfaze grafikotik) gehitu SMB inprimagailua: `smb://192.168.10.1/HP_Zuzendaritza_Win` domeinuko `sty.eus\zuzendari1` erabiltzailearen kredentzialekin.
    * **Egiaztapena:** Exekutatu `lp -d HP_Zuzendaritza_Win /etc/hosts` edo proba-orria inprimatu.
-   <img width="1167" height="942" alt="Captura de pantalla 2026-10-21 095606" src="https://github.com/user-attachments/assets/0bf486d4-4fef-4423-805e-fdfbc7700ecd" />
+<img width="601" height="68" alt="Captura de pantalla 2026-10-22 a las 8 04 45" src="https://github.com/user-attachments/assets/d684349f-805d-414d-a5ea-4fba45fe628b" />
+<img width="605" height="493" alt="Captura de pantalla 2026-10-22 a las 8 04 41" src="https://github.com/user-attachments/assets/97fb7726-90d5-4fa5-980f-2446ae223c92" />
 
 
-   <img width="983" height="788" alt="Captura de pantalla 2026-10-21 095628" src="https://github.com/user-attachments/assets/c59e7e5d-443a-4b5d-a83c-f8bb739ed8d7" />
 
 
 
