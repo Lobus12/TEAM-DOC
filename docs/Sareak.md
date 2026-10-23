@@ -27,6 +27,8 @@ concesioen barruan hainbat zerbitzari edukiko ditugu:
 → 192.168.10.200 beste reserva bat da, gure kasuan cups inprimagailuak ditugun ubuntu serverrra  
 → 192.168.10.152 Jitsi video konferentzia instalatuta dugun ubuntu serverra   
 → 192.168.10.150 datu basea eta wordpress dugun ubuntu serverra
+<img width="1021" height="361" alt="irudia" src="https://github.com/user-attachments/assets/1a777716-93d5-4ee1-a512-1b4545f21f75" />
+
 
 <img width="754" height="377" alt="imagen" src="https://github.com/user-attachments/assets/b0ce6278-0f81-4ec3-9186-39cb8e6cfcb3" />
 
